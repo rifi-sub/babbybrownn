@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>GirrlyyMommyyy / babbyybrownn | Goddess & Financial Dominatrix</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&amp;display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#ba0060",
+                        "primary-dark": "#7a003e",
+                        "secondary-pink": "#fce7f3",
+                        "accent-gold": "#d4af37",
+                        "dark-lux": "#0b0608",
+                        "gray-lux": "#1c1014",
+                        "background-rose": "#faf5f6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "sans": ["Montserrat", "sans-serif"],
+                        "display": ["Playfair Display", "serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        body {
+            background-color: #faf5f6;
+            cursor: default;
+            overflow-x: hidden;
+        }
+
+        /* Delicate floral overlay from original template */
+        .floral-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.06;
+            pointer-events: none;
+            background-repeat: repeat;
+        }
+
+        /* Custom high-end leopard spot pattern in HSL/RGBA pink-fuchsia */
+        .leopard-pattern-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ba0060' fill-opacity='0.05'%3E%3Cpath d='M15,15 C12,12 8,17 9,21 C10,25 15,26 17,22 C19,18 19,16 15,15 Z M35,28 C31,24 25,25 24,30 C23,35 26,39 30,38 C34,37 38,32 35,28 Z M65,15 C61,11 53,13 52,19 C51,25 55,28 61,27 C67,26 68,20 65,15 Z M72,42 C68,40 62,42 63,47 C64,52 70,53 73,49 C76,45 75,44 72,42 Z M15,62 C11,58 5,62 6,67 C7,72 14,73 16,69 C18,65 17,65 15,62 Z M45,68 C40,64 34,65 33,71 C32,77 38,80 42,79 C46,78 50,72 45,68 Z M68,68 C64,64 58,68 59,73 C60,78 66,79 69,75 C72,71 71,71 68,68 Z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Solid leopard print for badges and details */
+        .leopard-accent-gold {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23d4af37' fill-opacity='0.15'%3E%3Cpath d='M10,10 C8,8 5,11 6,14 C7,17 10,18 11,15 Z M25,20 C22,17 18,18 17,21 C16,24 18,27 20,26 Z M45,10 C42,8 37,9 36,13 C35,17 38,19 42,18 Z M50,30 C47,28 43,30 44,33 C45,36 49,37 51,34 Z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Glassmorphism containers with fuchsia glow shadow */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(250, 217, 226, 0.6);
+            box-shadow: 0 20px 40px rgba(186, 0, 96, 0.04);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            box-shadow: 0 30px 60px rgba(186, 0, 96, 0.08);
+            border-color: rgba(186, 0, 96, 0.2);
+        }
+
+        /* Editorial frame styling */
+        .editorial-frame {
+            border: 8px solid #ffd9e2;
+            position: relative;
+        }
+
+        .editorial-frame::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(#ba0060 20%, transparent 20%);
+            background-size: 10px 10px;
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        /* Marquee ticker tape animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Scroll reveal effects */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="text-gray-lux selection:bg-secondary-pink selection:text-primary">
+
+    <!-- Floral Background Watermark -->
+    <div class="floral-overlay"
+        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXTyjCpj4m33Ah_JX2N5i4UdIYf7vmIpiBKeSPY_VQeut-x3f0XsvbR5GXxJbd0bpSKc7szLvD8HFgMMPL6RYwe-UZt1WH8BLXx1WQrqQQ7E_nT4sihbAHghdovfCyZb6z0suYDCoMt5WVGdJQWaBmX9_Cn-SjckqK0GIob_-S1Wmk7HPoj9x6BnqbxJnN5Kx8nHBgwYLb_YF7ygqvjMso6xrHf4TWPAJzsPXYBdxEAK3mALJFBD-u')">
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-secondary-pink/40 shadow-sm">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
+            <a class="font-display text-[26px] md:text-[32px] font-bold text-primary tracking-tight flex items-center gap-2" href="#inicio">
+                <span class="material-symbols-outlined text-primary text-3xl font-light">spa</span>
+                <span>GIRRLYY MOMMYYY</span>
+            </a>
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-semibold tracking-wider uppercase text-gray-lux/80 hover:text-primary transition-colors" href="#inicio">Inicio</a>
+                <a class="text-sm font-semibold tracking-wider uppercase text-gray-lux/80 hover:text-primary transition-colors" href="#bio">Sobre Mí</a>
+                <a class="text-sm font-semibold tracking-wider uppercase text-gray-lux/80 hover:text-primary transition-colors" href="#galeria">Galería</a>
+                <a class="text-sm font-semibold tracking-wider uppercase text-gray-lux/80 hover:text-primary transition-colors" href="#servicios">Servicios</a>
+                <a class="text-sm font-semibold tracking-wider uppercase text-gray-lux/80 hover:text-primary transition-colors" href="#vip">VIP Access</a>
+                <a class="text-sm font-semibold tracking-wider uppercase text-gray-lux/80 hover:text-primary transition-colors" href="#contacto">Contacto</a>
+            </nav>
+            <a class="hidden sm:inline-block bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md shadow-primary/20 hover:scale-[1.03]" href="#vip">
+                VIP Access
+            </a>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-1 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white/95 border-b border-secondary-pink/40 absolute top-full left-0 w-full p-8 flex flex-col gap-6 shadow-xl animate-in slide-in-from-top duration-300" id="mobile-menu">
+            <a class="text-sm font-bold tracking-widest uppercase text-gray-lux" href="#inicio" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a>
+            <a class="text-sm font-bold tracking-widest uppercase text-gray-lux" href="#bio" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre Mí</a>
+            <a class="text-sm font-bold tracking-widest uppercase text-gray-lux" href="#galeria" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Galería</a>
+            <a class="text-sm font-bold tracking-widest uppercase text-gray-lux" href="#servicios" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Servicios</a>
+            <a class="text-sm font-bold tracking-widest uppercase text-gray-lux" href="#vip" onclick="document.getElementById('mobile-menu').classList.add('hidden')">VIP Access</a>
+            <a class="text-sm font-bold tracking-widest uppercase text-gray-lux" href="#contacto" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contacto</a>
+            <a class="bg-primary text-white text-center py-4 rounded-full text-xs font-bold tracking-widest uppercase shadow-md shadow-primary/20" href="#vip" onclick="document.getElementById('mobile-menu').classList.add('hidden')">VIP Access</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-36 pb-20 md:pt-52 md:pb-36 overflow-hidden leopard-pattern-bg" id="inicio">
+        <!-- Floating Floral elements -->
+        <div class="absolute -top-10 -left-10 text-primary/10 select-none pointer-events-none hidden lg:block rotate-[15deg]">
+            <span class="material-symbols-outlined !text-[240px]">local_florist</span>
+        </div>
+        <div class="absolute bottom-10 right-0 text-primary/5 select-none pointer-events-none hidden lg:block rotate-[-30deg]">
+            <span class="material-symbols-outlined !text-[320px]">spa</span>
+        </div>
+
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <!-- Left Side: Editorial Content -->
+            <div class="lg:col-span-7 space-y-8 z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-bold tracking-widest uppercase leopard-accent-gold">
+                    <span class="material-symbols-outlined text-sm">verified</span>
+                    <span>EXCLUSIVIDAD & DOMINACIÓN FINANCIERA</span>
+                </div>
+                <div class="space-y-4">
+                    <h1 class="font-display text-[48px] md:text-[68px] font-bold text-gray-lux leading-[1.05] tracking-tight">
+                        Tributa.<br>
+                        <span class="text-primary italic font-normal">Luego escribe.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-lux/80 max-w-xl font-light leading-relaxed">
+                        Bienvenido al universo privado de <strong class="font-semibold text-primary">GirrlyyMommyyy</strong> (@babbyybrownn). El control financiero y la adoración de pies llevados a su máxima expresión de lujo editorial.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a class="bg-primary hover:bg-primary-dark text-white text-center px-10 py-5 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-xl shadow-primary/30 hover:scale-[1.02] flex items-center justify-center gap-2" href="#contacto">
+                        <span class="material-symbols-outlined">payments</span>
+                        <span>Enviar Tributo Inicial (30€)</span>
+                    </a>
+                    <a class="border-2 border-gray-lux hover:bg-gray-lux hover:text-white text-gray-lux text-center px-10 py-5 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2" href="#galeria">
+                        <span class="material-symbols-outlined">lock</span>
+                        <span>Ver Galería VIP</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Right Side: Editorial Frame Image -->
+            <div class="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center z-10">
+                <div class="editorial-frame w-[320px] h-[400px] md:w-[380px] md:h-[480px] rounded-lg">
+                    <div class="w-full h-full rounded-lg overflow-hidden shadow-2xl relative">
+                        <img class="w-full h-full object-cover"
+                            alt="Main profile avatar - blonde woman in stylish outfit"
+                            src="https://pbs.twimg.com/profile_images/2043686854856499200/D0lkysTO.jpg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-lux/30 to-transparent"></div>
+                    </div>
+                </div>
+                <!-- Small float badge with leopard print -->
+                <div class="absolute -bottom-6 -left-6 glass-card p-5 rounded-xl border border-secondary-pink shadow-xl hidden sm:flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">local_florist</span>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold tracking-wider uppercase text-primary">Goddess</p>
+                        <p class="text-[10px] font-bold text-gray-lux/60 uppercase">Findom & Feet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Running Marquee Ticker -->
+    <div class="w-full bg-primary py-4 overflow-hidden border-y border-primary-dark/20 relative z-10 shadow-lg leopard-accent-gold">
+        <div class="animate-marquee whitespace-nowrap flex items-center">
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">FINDOM</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">FEET WORSHIP</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">TRIBUTA Y ADORA</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">DRAINING SESSIONS</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">GIRRLYY MOMMYYY</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">TRIBUTO INICIAL 30€</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">HUMILIATION</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+
+            <!-- Repeat for seamless looping -->
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">FINDOM</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">FEET WORSHIP</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">TRIBUTA Y ADORA</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">DRAINING SESSIONS</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">GIRRLYY MOMMYYY</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">TRIBUTO INICIAL 30€</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+            <span class="text-white text-xs font-extrabold tracking-[0.2em] uppercase mx-8">HUMILIATION</span>
+            <span class="text-white/40 text-xs font-bold mx-4">•</span>
+        </div>
+    </div>
+
+    <!-- Sobre Mí / Bio Section -->
+    <section class="py-24 md:py-36 relative" id="bio">
+        <!-- Botanical Vector Background Placement -->
+        <div class="absolute top-20 right-10 text-primary/5 pointer-events-none select-none">
+            <span class="material-symbols-outlined !text-[200px]">local_florist</span>
+        </div>
+        <div class="absolute bottom-20 left-10 text-primary/5 pointer-events-none select-none">
+            <span class="material-symbols-outlined !text-[250px]">spa</span>
+        </div>
+
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-8 scroll-reveal">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold tracking-[0.3em] uppercase text-primary">THE GODDESS MINDSET</span>
+                        <h2 class="font-display text-[40px] md:text-[52px] font-bold text-gray-lux leading-tight">
+                            La Armonía del Control y la <span class="italic text-primary font-normal">Seducción</span>
+                        </h2>
+                        <div class="w-20 h-1 bg-primary"></div>
+                    </div>
+                    <div class="space-y-6 text-gray-lux/80 font-light text-base md:text-lg leading-relaxed">
+                        <p class="first-letter:text-6xl first-letter:font-display first-letter:text-primary first-letter:float-left first-letter:mr-4 first-letter:mt-1 font-normal text-gray-lux">
+                            Como Financial Dominatrix y Diosa de Pies, mi rol no es complacer de manera común, sino dirigir con elegancia. El fetiche es una ceremonia de lujo y respeto mutuo. Mi tiempo tiene un valor y tu sumisión financiera es la mayor prueba de tu devoción.
+                        </p>
+                        <p>
+                            En este espacio, el glamour se fusiona con la dominación absoluta. No hay espacio para vacilaciones. Si buscas interactuar conmigo o acceder a mi contenido de pies y sesiones de drenaje, debes estar preparado para rendir el tributo que me corresponde.
+                        </p>
+                        <blockquote class="italic text-primary border-l-4 border-primary pl-6 py-2 my-6 font-semibold">
+                            "Tu cuenta bancaria es el reflejo de tu adoración. Tributa y obedece bajo mis términos."
+                        </blockquote>
+                    </div>
+                    <div class="flex gap-4 pt-4">
+                        <a class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300" href="#servicios">
+                            Mis Servicios
+                        </a>
+                        <a class="border border-primary/40 hover:bg-primary/5 text-primary px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300" href="#vip">
+                            Canales VIP
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Traits Grid -->
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6 scroll-reveal" style="transition-delay: 200ms;">
+                    <!-- Trait 1 -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col gap-4 border-t-4 border-primary">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">diamond</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-lux">Dominante</h3>
+                        <p class="text-sm text-gray-lux/70 leading-relaxed font-light">Control absoluto sobre las carteras y mentes de mis sumisos bajo directrices rigurosas y seductoras.</p>
+                    </div>
+                    <!-- Trait 2 -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col gap-4 border-t-4 border-accent-gold">
+                        <div class="w-12 h-12 rounded-full bg-accent-gold/10 flex items-center justify-center text-accent-gold">
+                            <span class="material-symbols-outlined">spa</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-lux">Seductora</h3>
+                        <p class="text-sm text-gray-lux/70 leading-relaxed font-light">Una mezcla perfecta de glamour de alta costura, estética de pies y smoking fetishes magnéticos.</p>
+                    </div>
+                    <!-- Trait 3 -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col gap-4 border-t-4 border-gray-lux">
+                        <div class="w-12 h-12 rounded-full bg-gray-lux/10 flex items-center justify-center text-gray-lux">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-lux">Findom Elite</h3>
+                        <p class="text-sm text-gray-lux/70 leading-relaxed font-light">Especializada en drenajes de billeteras y humillación financiera para subalternos comprometidos.</p>
+                    </div>
+                    <!-- Trait 4 -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col gap-4 border-t-4 border-primary">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">local_florist</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-lux">Feet Goddess</h3>
+                        <p class="text-sm text-gray-lux/70 leading-relaxed font-light">Sesiones de adoración exclusivas y contenido de pies premium en tacones y medias de diseñador.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Gallery Section -->
+    <section class="py-24 md:py-36 bg-white/60 leopard-pattern-bg border-y border-secondary-pink/40" id="galeria">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                <div class="space-y-4">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-primary">GALERÍA EDITORIAL</span>
+                    <h2 class="font-display text-[40px] md:text-[52px] font-bold text-gray-lux">Momentos & Teasers</h2>
+                    <div class="w-20 h-1 bg-primary"></div>
+                </div>
+                <p class="text-gray-lux/60 text-sm max-w-md font-light leading-relaxed">
+                    Una colección visual de mi contenido. Teasers de drenaje, sesiones conjuntas y material de promoción seleccionado.
+                </p>
+            </div>
+
+            <!-- Photos Grid from info.json -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="glass-card p-4 rounded-3xl group cursor-pointer overflow-hidden scroll-reveal">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden relative shadow-md">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                            alt="Support group promo image"
+                            src="https://pbs.twimg.com/media/HLWjgsuXkAAY-mm.jpg">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-white text-4xl">lock_open</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 px-2">
+                        <span class="text-[10px] font-bold tracking-widest text-primary uppercase block">PROMO</span>
+                        <h4 class="text-base font-bold text-gray-lux mt-1">Grupo de Apoyo</h4>
+                        <p class="text-xs text-gray-lux/60 font-light mt-1">Updates de actividad y fotos</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="glass-card p-4 rounded-3xl group cursor-pointer overflow-hidden scroll-reveal" style="transition-delay: 150ms;">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden relative shadow-md">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                            alt="Draining teaser image"
+                            src="https://pbs.twimg.com/media/HLW4lyrXMAAQVMg.jpg">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-white text-4xl">lock_open</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 px-2">
+                        <span class="text-[10px] font-bold tracking-widest text-primary uppercase block font-semibold">NSFW / TEASER</span>
+                        <h4 class="text-base font-bold text-gray-lux mt-1">Draining Teaser</h4>
+                        <p class="text-xs text-gray-lux/60 font-light mt-1">Control absoluto financiero</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="glass-card p-4 rounded-3xl group cursor-pointer overflow-hidden scroll-reveal" style="transition-delay: 300ms;">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden relative shadow-md">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                            alt="Collaborative session image 1"
+                            src="https://pbs.twimg.com/media/HLW5_AFXAAA5evs.jpg">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-white text-4xl">lock_open</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 px-2">
+                        <span class="text-[10px] font-bold tracking-widest text-primary uppercase block font-semibold">COLLABORATION</span>
+                        <h4 class="text-base font-bold text-gray-lux mt-1">Doble Dominación</h4>
+                        <p class="text-xs text-gray-lux/60 font-light mt-1">Sesiones conjuntas de drenaje</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="glass-card p-4 rounded-3xl group cursor-pointer overflow-hidden scroll-reveal" style="transition-delay: 450ms;">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden relative shadow-md">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                            alt="Collaborative session image 2"
+                            src="https://pbs.twimg.com/media/HLW5_AFXsAAcS99.jpg">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-white text-4xl">lock_open</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 px-2">
+                        <span class="text-[10px] font-bold tracking-widest text-primary uppercase block font-semibold">COLLABORATION</span>
+                        <h4 class="text-base font-bold text-gray-lux mt-1">Humillación Conjunta</h4>
+                        <p class="text-xs text-gray-lux/60 font-light mt-1">Sesiones con erisanblycos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action Banner inside Gallery -->
+            <div class="mt-20 p-10 md:p-16 rounded-3xl border border-secondary-pink bg-white/60 backdrop-blur-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 shadow-md">
+                <div class="space-y-3 text-center md:text-left z-10">
+                    <span class="text-[10px] font-bold tracking-widest text-primary uppercase block">VIP LOCK</span>
+                    <h3 class="font-display text-2xl md:text-3xl font-bold text-gray-lux">¿Deseas ver más allá de los teasers?</h3>
+                    <p class="text-sm text-gray-lux/70 max-w-xl font-light leading-relaxed">
+                        Accede a mis canales privados de Telegram y redes premium. Contenido sin censura, sesiones en vivo y la interacción directa que tanto codicias.
+                    </p>
+                </div>
+                <a class="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-lg shadow-primary/25 hover:scale-[1.03] shrink-0 z-10" href="#vip">
+                    Desbloquear Acceso VIP
+                </a>
+                <!-- Subtle design elements inside banner -->
+                <div class="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+                <div class="absolute -bottom-10 -left-10 text-primary/5 select-none pointer-events-none rotate-45">
+                    <span class="material-symbols-outlined !text-[120px]">local_florist</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="py-24 md:py-36 relative" id="servicios">
+        <!-- Floating Floral decoration -->
+        <div class="absolute top-1/4 left-5 text-primary/5 pointer-events-none select-none">
+            <span class="material-symbols-outlined !text-[180px]">spa</span>
+        </div>
+
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center space-y-4 mb-20 scroll-reveal">
+                <span class="text-xs font-bold tracking-[0.3em] uppercase text-primary">TARIFAS Y RITUALES</span>
+                <h2 class="font-display text-[40px] md:text-[52px] font-bold text-gray-lux">Servicios & Sesiones</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-20">
+                <!-- Service 1: Findom Sessions -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group border-t-8 border-primary scroll-reveal">
+                    <!-- Subtle leopard background accent on header -->
+                    <div class="absolute top-0 left-0 w-full h-12 leopard-accent-gold pointer-events-none opacity-40"></div>
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-4">
+                            <span class="material-symbols-outlined text-2xl font-bold">payments</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-lux">Findom Sessions</h3>
+                        <p class="text-sm text-gray-lux/70 font-light leading-relaxed">
+                            Sesiones personalizadas de dominación financiera. Humillación intelectual, control de gastos, draining de carteras y sesiones bajo demanda. El respeto y el tributo mandan.
+                        </p>
+                    </div>
+                    <div class="mt-8 space-y-6">
+                        <div class="border-t border-secondary-pink/50 pt-6">
+                            <span class="text-[10px] font-bold tracking-wider text-gray-lux/50 block uppercase">MÉTODO DE RESERVA</span>
+                            <span class="text-xs font-bold text-gray-lux">Tribute first via DM or Telegram</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <span class="text-[10px] font-bold tracking-wider text-gray-lux/50 block uppercase">TRIBUTO MÍNIMO</span>
+                                <span class="text-2xl font-bold text-primary">30€ <span class="text-xs font-semibold text-gray-lux/60">inicial</span></span>
+                            </div>
+                            <a class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full text-[10px] font-bold tracking-widest uppercase transition-all duration-300" href="#contacto">
+                                Reservar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Feet Content (Highlighted Card) -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group border-t-8 border-accent-gold scale-100 lg:scale-[1.03] z-10 shadow-lg scroll-reveal" style="transition-delay: 150ms;">
+                    <div class="absolute top-0 left-0 w-full h-12 leopard-accent-gold pointer-events-none opacity-60"></div>
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 rounded-full bg-accent-gold/10 flex items-center justify-center text-accent-gold mt-4">
+                            <span class="material-symbols-outlined text-2xl">spa</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-lux">Feet Content</h3>
+                        <p class="text-sm text-gray-lux/70 font-light leading-relaxed">
+                            Contenido fotográfico y videográfico exclusivo enfocado en la adoración de pies. Sesiones con tacones de lujo, medias finas y fetiches específicos adaptados a tu devoción.
+                        </p>
+                    </div>
+                    <div class="mt-8 space-y-6">
+                        <div class="border-t border-secondary-pink/50 pt-6">
+                            <span class="text-[10px] font-bold tracking-wider text-gray-lux/50 block uppercase">MÉTODO DE RESERVA</span>
+                            <span class="text-xs font-bold text-gray-lux">Via Telegram</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <span class="text-[10px] font-bold tracking-wider text-gray-lux/50 block uppercase">RANGO DE PRECIO</span>
+                                <span class="text-2xl font-bold text-primary">Customizado</span>
+                            </div>
+                            <a class="bg-accent-gold hover:bg-yellow-600 text-white px-6 py-3 rounded-full text-[10px] font-bold tracking-widest uppercase transition-all duration-300" href="#contacto">
+                                Solicitar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Draining Sessions -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group border-t-8 border-gray-lux scroll-reveal" style="transition-delay: 300ms;">
+                    <div class="absolute top-0 left-0 w-full h-12 leopard-accent-gold pointer-events-none opacity-40"></div>
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 rounded-full bg-gray-lux/10 flex items-center justify-center text-gray-lux mt-4">
+                            <span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-lux">Draining Sessions</h3>
+                        <p class="text-sm text-gray-lux/70 font-light leading-relaxed">
+                            Sesiones extremas de vaciado de cuentas bancarias y sumisión económica en tiempo real. Humillación directa donde demuestras tu devoción entregándome el control de tus finanzas.
+                        </p>
+                    </div>
+                    <div class="mt-8 space-y-6">
+                        <div class="border-t border-secondary-pink/50 pt-6">
+                            <span class="text-[10px] font-bold tracking-wider text-gray-lux/50 block uppercase">MÉTODO DE RESERVA</span>
+                            <span class="text-xs font-bold text-gray-lux">Tribute required</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <span class="text-[10px] font-bold tracking-wider text-gray-lux/50 block uppercase">RANGO DE PRECIO</span>
+                                <span class="text-2xl font-bold text-primary">Sesión VIP</span>
+                            </div>
+                            <a class="bg-gray-lux hover:bg-black text-white px-6 py-3 rounded-full text-[10px] font-bold tracking-widest uppercase transition-all duration-300" href="#contacto">
+                                Iniciar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Joint Collaborations Info -->
+            <div class="glass-card p-8 md:p-12 rounded-3xl border border-secondary-pink bg-white/60 relative overflow-hidden max-w-4xl mx-auto scroll-reveal">
+                <!-- Decorative background spots -->
+                <div class="absolute right-0 top-0 w-32 h-full leopard-accent-gold opacity-30 pointer-events-none"></div>
+                <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                        <span class="material-symbols-outlined text-3xl">group</span>
+                    </div>
+                    <div class="space-y-2 text-center md:text-left flex-grow">
+                        <h4 class="text-lg font-bold text-gray-lux">Colaboración Especial: Joint Draining Sessions</h4>
+                        <p class="text-sm text-gray-lux/70 font-light leading-relaxed">
+                            Sesiones de drenaje colaborativo organizadas junto a la Dominatrix <strong class="font-semibold text-primary">erisanblycos</strong>. Doble autoridad, doble drenaje, humillación financiera extrema y absoluta devoción por partida doble.
+                        </p>
+                    </div>
+                    <a class="border border-primary text-primary hover:bg-primary/5 px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 shrink-0" href="#contacto">
+                        Ver Detalles
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Access Hub / Links Hub -->
+    <section class="py-24 md:py-36 bg-gray-lux text-white leopard-pattern-bg relative overflow-hidden" id="vip">
+        <!-- Floating Floral decoration -->
+        <div class="absolute bottom-5 right-5 text-white/5 pointer-events-none select-none">
+            <span class="material-symbols-outlined !text-[260px]">local_florist</span>
+        </div>
+        <div class="absolute top-5 left-5 text-white/5 pointer-events-none select-none">
+            <span class="material-symbols-outlined !text-[200px]">spa</span>
+        </div>
+
+        <div class="max-w-3xl mx-auto px-margin-mobile text-center relative z-10 space-y-12">
+            <div class="space-y-4">
+                <span class="text-xs font-bold tracking-[0.3em] uppercase text-primary">VIP CHANNELS HUB</span>
+                <h2 class="font-display text-[40px] md:text-[52px] font-bold">Acceso Directo VIP</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="text-white/70 max-w-lg mx-auto font-light text-base md:text-lg">
+                    Elige el canal de tu preferencia para unirte a mi círculo íntimo de sumisos. Acceso verificado de forma inmediata.
+                </p>
+            </div>
+
+            <!-- Link Cards List -->
+            <div class="grid grid-cols-1 gap-6 text-left">
+                <!-- Support Group Link -->
+                <a class="group relative flex items-center justify-between p-6 md:p-8 rounded-full bg-white/10 hover:bg-white/15 border border-white/15 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl"
+                    target="_blank" href="https://t.me/+9CvHHG7bJLFmZGFk">
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+                            <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold text-primary tracking-widest uppercase block">TELEGRAM SUPPORT GROUP</span>
+                            <span class="text-lg md:text-xl font-bold block mt-1">Grupito de Apoyo</span>
+                            <span class="text-xs text-white/50 block font-light mt-0.5">Fotos diarias y actualizaciones de actividad del templo</span>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined text-2xl group-hover:translate-x-2 transition-transform duration-300 text-white/40 group-hover:text-primary">arrow_forward</span>
+                </a>
+
+                <!-- Collaborative Session Link -->
+                <a class="group relative flex items-center justify-between p-6 md:p-8 rounded-full bg-white/10 hover:bg-white/15 border border-white/15 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl"
+                    target="_blank" href="https://t.me/+ls0sXOQjcHo2NDI8">
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-gold/20 flex items-center justify-center border border-accent-gold/30">
+                            <span class="material-symbols-outlined text-accent-gold text-2xl" style="font-variation-settings: 'FILL' 1;">group</span>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold text-accent-gold tracking-widest uppercase block">TELEGRAM COLLABORATIONS</span>
+                            <span class="text-lg md:text-xl font-bold block mt-1">Sesiones de Drenaje Conjunto</span>
+                            <span class="text-xs text-white/50 block font-light mt-0.5">Collaborative draining sessions with another superior domme</span>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined text-2xl group-hover:translate-x-2 transition-transform duration-300 text-white/40 group-hover:text-accent-gold">arrow_forward</span>
+                </a>
+            </div>
+
+            <!-- Footer Notes -->
+            <div class="pt-6 text-white/40 text-xs font-light tracking-wide uppercase flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-sm">security</span>
+                <span>Contenido solo para adultos (+18) • Privacidad y discreción absoluta</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Tribute Links Section -->
+    <section class="py-24 md:py-36 relative" id="contacto">
+        <!-- Background decorative vectors -->
+        <div class="absolute top-20 left-10 text-primary/5 pointer-events-none select-none">
+            <span class="material-symbols-outlined !text-[220px]">local_florist</span>
+        </div>
+
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <!-- Left Side: Informational Text -->
+            <div class="lg:col-span-5 space-y-8 scroll-reveal">
+                <div class="space-y-4">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-primary">SUMISIÓN DIRECTA</span>
+                    <h2 class="font-display text-[40px] md:text-[52px] font-bold text-gray-lux leading-tight">Envía tu Tributo</h2>
+                    <div class="w-20 h-1 bg-primary"></div>
+                </div>
+                <p class="text-gray-lux/70 font-light text-base md:text-lg leading-relaxed">
+                    Si estás listo para iniciar tu sumisión o coordinar una sesión exclusiva de draining o feet content, realiza tu tributo de forma inmediata. **El tributo inicial obligatorio es de 30€**. Una vez enviado, ponte en contacto adjuntando el comprobante.
+                </p>
+
+                <!-- Information Badge -->
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-accent-gold flex items-start gap-4">
+                    <span class="material-symbols-outlined text-accent-gold text-2xl shrink-0">info</span>
+                    <p class="text-xs text-gray-lux/60 font-light leading-relaxed">
+                        Cualquier mensaje que no empiece con el comprobante de tributo de 30€ será ignorado y bloqueado de forma permanente. Valora mi tiempo si quieres que valore tu existencia.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: Tribute Links Hub -->
+            <div class="lg:col-span-7 scroll-reveal" style="transition-delay: 200ms;">
+                <div class="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden space-y-8">
+                    <!-- Subtle leopard top accent line -->
+                    <div class="absolute top-0 left-0 w-full h-3 leopard-accent-gold"></div>
+                    
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold text-gray-lux">Canales de Pago & Contacto</h3>
+                        <p class="text-xs text-gray-lux/50 font-light">Selecciona tu plataforma para enviar el tributo inicial de 30€</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Telegram Support Group Option -->
+                        <div class="p-6 rounded-2xl border border-secondary-pink bg-white/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-primary transition-all duration-300">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold text-primary tracking-widest uppercase block">OPCIÓN A (RECOMENDADO)</span>
+                                <h4 class="text-base font-bold text-gray-lux">Telegram Direct Tribute</h4>
+                                <p class="text-xs text-gray-lux/60 font-light">Accede al grupito de apoyo y contacta para enviar tus tributos.</p>
+                            </div>
+                            <a class="bg-primary hover:bg-primary-dark text-white text-center px-6 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-primary/20 shrink-0" 
+                                target="_blank" href="https://t.me/+9CvHHG7bJLFmZGFk">
+                                <span class="material-symbols-outlined text-sm">send</span>
+                                <span>Telegram</span>
+                            </a>
+                        </div>
+
+                        <!-- Twitter X DM Option -->
+                        <div class="p-6 rounded-2xl border border-secondary-pink bg-white/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-primary transition-all duration-300">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold text-gray-lux/50 tracking-widest uppercase block font-semibold">OPCIÓN B</span>
+                                <h4 class="text-base font-bold text-gray-lux">X (Twitter) DM</h4>
+                                <p class="text-xs text-gray-lux/60 font-light">Envía tu propuesta y comprobante de tributo de 30€ por mensaje privado.</p>
+                            </div>
+                            <a class="border border-gray-lux hover:bg-gray-lux hover:text-white text-gray-lux text-center px-6 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 shrink-0" 
+                                target="_blank" href="https://x.com/babbyybrownn">
+                                <span class="material-symbols-outlined text-sm">share</span>
+                                <span>Mensaje en X</span>
+                            </a>
+                        </div>
+
+                        <!-- Joint Draining Sessions Option -->
+                        <div class="p-6 rounded-2xl border border-secondary-pink bg-white/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-accent-gold transition-all duration-300">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold text-accent-gold tracking-widest uppercase block font-semibold">COLABORATIVO</span>
+                                <h4 class="text-base font-bold text-gray-lux">Joint Draining Sessions</h4>
+                                <p class="text-xs text-gray-lux/60 font-light">Acceso a las sesiones de drenaje conjunto con erisanblycos.</p>
+                            </div>
+                            <a class="bg-accent-gold hover:bg-yellow-600 text-white text-center px-6 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-accent-gold/20 shrink-0" 
+                                target="_blank" href="https://t.me/+ls0sXOQjcHo2NDI8">
+                                <span class="material-symbols-outlined text-sm">group</span>
+                                <span>Sesión Conjunta</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-lux text-white border-t-4 border-primary relative z-10 leopard-pattern-bg">
+        <div class="max-w-container-max mx-auto px-margin-mobile py-16 flex flex-col items-center gap-8 text-center">
+            <h2 class="font-display text-2xl md:text-3xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-3xl font-light">spa</span>
+                <span>GIRRLYY MOMMYYY</span>
+            </h2>
+            <nav class="flex flex-wrap justify-center gap-8 text-xs font-bold tracking-widest uppercase text-white/50">
+                <a class="hover:text-primary transition-colors" href="#inicio">Inicio</a>
+                <a class="hover:text-primary transition-colors" href="#bio">Sobre Mí</a>
+                <a class="hover:text-primary transition-colors" href="#galeria">Galería</a>
+                <a class="hover:text-primary transition-colors" href="#servicios">Servicios</a>
+                <a class="hover:text-primary transition-colors" href="#vip">VIP Hub</a>
+                <a class="hover:text-primary transition-colors" href="#contacto">Contacto</a>
+            </nav>
+            <div class="flex gap-6 mt-2">
+                <a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors text-white/70 hover:text-white"
+                    target="_blank" href="https://x.com/babbyybrownn">
+                    <span class="material-symbols-outlined text-lg">share</span>
+                </a>
+            </div>
+            <div class="max-w-2xl border-t border-white/5 pt-8 w-full">
+                <p class="text-xs text-white/40 leading-relaxed font-light">
+                    © 2026 GIRRLYY MOMMYYY / BABBYY BROWNN. Todos los derechos reservados. Todo el contenido está protegido por derechos de autor y está destinado exclusivamente para adultos mayores de 18 años. La evasión o el no pago de tributos acordados derivará en exclusión permanente.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Scroll reveal logic
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Soft parallax effect for floral overlay based on mouse moves
+        window.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX / window.innerWidth - 0.5) * 15;
+            const moveY = (e.clientY / window.innerHeight - 0.5) * 15;
+            document.querySelector('.floral-overlay').style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
+</body>
+
+</html>
